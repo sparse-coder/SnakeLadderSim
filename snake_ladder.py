@@ -61,10 +61,8 @@ def generate_snakes_ladders():
         rse = (start, end) if start > end else (end, start) 
         board[key1].remove(start)
         board[key2].remove(end) 
-
         head, tail = rse
-        snakes.append(Snake(head, tail))
-        
+        snakes.append(Snake(head, tail))  
         n_snakes-=1
     
     while n_ladders:
@@ -190,7 +188,6 @@ class Game:
         snakes = {head: tail for head, tail in snakes_pos}
         ladders ={tail:head for head, tail in ladders_pos}
         return SnakeBoard(snakes, ladders)
-
 
 if __name__ == "__main__":
    players = 4

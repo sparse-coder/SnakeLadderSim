@@ -153,6 +153,7 @@ class SnakeBoard:
 class Game:
     def __init__(self, n_players) -> None:
         self.n_players = n_players
+        # this only allows maximum of 4 players to play
         self.coins = [Coin(color) for color in sample("RGBY", k= n_players)]
         self.players = [Player(f"Player {i}", coin) for i, coin in enumerate(self.coins)]
         self.dice = Dice() 
